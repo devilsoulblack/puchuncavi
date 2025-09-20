@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Puchuncaví - Turismo y Playas</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #f9fafb; color: #333; }
-    header { background: #1e3a8a; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { margin: 0; font-size: 24px; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    .hero { background: url('https://upload.wikimedia.org/wikipedia/commons/f/fd/Horc%C3%B3n%2C_Puchuncav%C3%AD.jpg') no-repeat center center/cover; height: 70vh; display: flex; justify-content: center; align-items: center; }
-    .hero div { background: rgba(0,0,0,0.6); padding: 30px; border-radius: 15px; color: white; text-align: center; max-width: 600px; }
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    section h3 { font-size: 28px; color: #1e3a8a; margin-bottom: 20px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
-    ul { list-style: disc inside; font-size: 18px; }
-    .contacto { background: #1e3a8a; color: white; text-align: center; padding: 60px 20px; }
-    .contacto a { background: white; color: #1e3a8a; padding: 12px 24px; border-radius: 25px; font-weight: bold; text-decoration: none; }
-    .contacto a:hover { background: #e5e7eb; }
-    footer { background: #111; color: #ccc; text-align: center; padding: 20px; }
+    :root{--blue:#1e3a8a;--bg:#f9fafb;--card:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;background:var(--bg);color:#222;line-height:1.5}
+    a{color:inherit}
+    header{background:var(--blue);color:#fff;padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+    header h1{margin:0;font-size:20px}
+    nav a{color:#fff;margin-left:12px;text-decoration:none;font-weight:600}
+    nav a:focus,nav a:hover{text-decoration:underline}
+
+    /* Hero */
+    .hero{height:70vh;display:flex;align-items:center;justify-content:center;position:relative}
+    .hero::before{content:"";position:absolute;inset:0;background-image:url("https://picsum.photos/seed/puchuncavi/1600/900");background-position:center;background-size:cover;background-repeat:no-repeat;filter:brightness(0.6)}
+    .hero .inner{position:relative;z-index:1;background:rgba(0,0,0,0.55);padding:28px;border-radius:12px;color:#fff;max-width:720px;text-align:center}
+    .hero h2{margin:0 0 10px;font-size:30px}
+    .hero p{margin:0;font-size:18px}
+
+    section{padding:48px 20px;max-width:1100px;margin:0 auto}
+    section h3{color:var(--blue);font-size:26px;margin-bottom:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .card img{width:100%;height:170px;object-fit:cover;border-radius:8px;display:block;margin-bottom:12px}
+    ul{padding-left:20px;margin:0;font-size:18px}
+
+    .contacto{background:var(--blue);color:#fff;text-align:center;padding:48px 20px}
+    .contacto a.cta{display:inline-block;background:#fff;color:var(--blue);padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;margin-top:12px}
+    footer{padding:18px;text-align:center;background:#0b0b0b;color:#ddd}
+
+    /* Responsive tweaks */
+    @media (max-width:520px){header{flex-direction:column;gap:10px} .hero h2{font-size:24px} .hero p{font-size:15px}}
   </style>
 </head>
 <body>
   <header>
     <h1>Descubre Puchuncaví</h1>
-    <nav>
+    <nav aria-label="Menú principal">
       <a href="#historia">Historia</a>
       <a href="#atractivos">Atractivos</a>
       <a href="#playas">Playas</a>
@@ -36,64 +49,75 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div>
-      <h2 style="font-size:36px; margin-bottom:20px;">Bienvenido a Puchuncaví</h2>
-      <p>Un rincón único de la Región de Valparaíso con playas, historia y naturaleza.</p>
-    </div>
-  </section>
-
-  <section id="historia">
-    <h3>Historia y Tradición</h3>
-    <p>Puchuncaví es una comuna costera de la Región de Valparaíso con un rico patrimonio cultural. Su nombre proviene del mapudungún y hace referencia a un lugar de descanso. Durante siglos, ha sido hogar de pescadores y agricultores, conservando hasta hoy sus tradiciones y fiestas populares.</p>
-  </section>
-
-  <section id="atractivos" style="background:#f3f4f6;">
-    <h3>Atractivos Turísticos</h3>
-    <div class="grid">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Playa_Horc%C3%B3n.jpg" alt="Playa Horcón">
-        <h4>Caleta Horcón</h4>
-        <p>Un pintoresco pueblo de pescadores, conocido por su bohemia, artesanía y su hermosa playa.</p>
+  <main>
+    <section class="hero" role="img" aria-label="Vista de la costa de Puchuncaví">
+      <div class="inner">
+        <h2>Bienvenido a Puchuncaví</h2>
+        <p>Un rincón de la Región de Valparaíso donde se mezclan playas, mar y tradiciones.</p>
       </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Caj%C3%B3n_de_Petorca_001.JPG" alt="Naturaleza Puchuncaví">
-        <h4>Parque Natural</h4>
-        <p>Senderos, miradores y áreas protegidas para quienes buscan conexión con la naturaleza.</p>
+    </section>
+
+    <section id="historia">
+      <h3>Historia y tradición</h3>
+      <p>Puchuncaví es una comuna costera con un patrimonio cultural ligado a la pesca y al trabajo del mar. Su nombre tiene raíces mapuches y la zona conserva festividades y costumbres vinculadas a la vida costera.</p>
+    </section>
+
+    <section id="atractivos" style="background:#f3f4f6;">
+      <h3>Atractivos turísticos</h3>
+      <div class="grid">
+        <article class="card">
+          <img src="https://picsum.photos/seed/horcon/800/450" alt="Playa Horcón">
+          <h4>Caleta Horcón</h4>
+          <p>Pintoresco pueblo de pescadores, famoso por su ambiente bohemio, venta de artesanías y accesos a la playa.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/naturaleza/800/450" alt="Senderos y miradores">
+          <h4>Parques y senderos</h4>
+          <p>Zonas naturales y miradores para recorrer a pie, ideales para conectar con la flora y fauna local.</p>
+        </article>
+
+        <article class="card">
+          <img src="https://picsum.photos/seed/ventanas/800/450" alt="Playa Ventanas">
+          <h4>Ventanas</h4>
+          <p>Sector con playas amplias y actividades familiares en temporada estival.</p>
+        </article>
       </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Casas_en_Ventanas.jpg" alt="Ventanas">
-        <h4>Ventanas</h4>
-        <p>Zona con playas extensas y tradiciones marineras, ideal para el turismo familiar.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="playas">
-    <h3>Playas de Puchuncaví</h3>
-    <ul>
-      <li>Playa Horcón</li>
-      <li>Playa Cau Cau</li>
-      <li>Playa Ventanas</li>
-      <li>Playa Quirilluca</li>
-      <li>Playa La Luna</li>
-    </ul>
-  </section>
+    <section id="playas">
+      <h3>Playas de Puchuncaví</h3>
+      <ul>
+        <li>Playa Horcón</li>
+        <li>Playa Cau Cau</li>
+        <li>Playa Ventanas</li>
+        <li>Playa Quirilluca</li>
+        <li>Playa La Luna</li>
+      </ul>
+    </section>
 
-  <section id="cabanas" style="background:#f3f4f6;">
-    <h3>Alquiler de Cabañas en Maitencillo</h3>
-    <p>Si buscas alojamiento junto al mar, Maitencillo es uno de los destinos favoritos de la comuna de Puchuncaví. Encuentra cabañas con vista al océano, rodeadas de naturaleza y con todas las comodidades para tu descanso.</p>
-    <p>Puedes reservar fácilmente en <a href="https://www.maitencillo.net" target="_blank" style="color:#1e3a8a; font-weight:bold;">Maitencillo.net</a></p>
-  </section>
+    <section id="cabanas" style="background:#f3f4f6;">
+      <h3>Alquiler de cabañas — Maitencillo</h3>
+      <p>Si buscas alojamiento cerca del mar, en Maitencillo hay muchas opciones de cabañas con vista al océano y comodidades para familias y grupos. Para ver disponibilidad y ofertas puedes visitar:</p>
+      <p><a href="https://www.maitencillo.net" target="_blank" rel="noopener noreferrer">maitencillo.net — Reserva cabañas</a></p>
+    </section>
 
-  <section id="contacto" class="contacto">
-    <h3>Planifica tu visita</h3>
-    <p>Ven a conocer Puchuncaví y vive una experiencia inolvidable entre playas, cultura y naturaleza.</p>
-    <a href="mailto:info@puchuncavi.cl">Contáctanos</a>
-  </section>
+    <section id="contacto" class="contacto">
+      <h3>Planifica tu visita</h3>
+      <p>Ven a conocer Puchuncaví: playas, cultura y naturaleza te esperan.</p>
+      <a class="cta" href="mailto:info@puchuncavi.cl">Contáctanos</a>
+    </section>
+  </main>
 
   <footer>
-    <p>© <script>document.write(new Date().getFullYear())</script> Puchuncaví Turismo. Todos los derechos reservados.</p>
+    <p>© <span id="year">2025</span> Puchuncaví Turismo. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    // Evita document.write — actualiza año de forma segura
+    (function(){
+      try{document.getElementById('year').textContent = new Date().getFullYear()}catch(e){/* silencioso */}
+    })();
+  </script>
 </body>
 </html>
