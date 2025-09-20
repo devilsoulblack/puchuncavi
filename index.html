@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puchuncaví - Turismo y Playas</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f9fafb; color: #333; }
+    header { background: #1e3a8a; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { margin: 0; font-size: 24px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .hero { background: url('https://upload.wikimedia.org/wikipedia/commons/f/fd/Horc%C3%B3n%2C_Puchuncav%C3%AD.jpg') no-repeat center center/cover; height: 70vh; display: flex; justify-content: center; align-items: center; }
+    .hero div { background: rgba(0,0,0,0.6); padding: 30px; border-radius: 15px; color: white; text-align: center; max-width: 600px; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    section h3 { font-size: 28px; color: #1e3a8a; margin-bottom: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .card img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    ul { list-style: disc inside; font-size: 18px; }
+    .contacto { background: #1e3a8a; color: white; text-align: center; padding: 60px 20px; }
+    .contacto a { background: white; color: #1e3a8a; padding: 12px 24px; border-radius: 25px; font-weight: bold; text-decoration: none; }
+    .contacto a:hover { background: #e5e7eb; }
+    footer { background: #111; color: #ccc; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Descubre Puchuncaví</h1>
+    <nav>
+      <a href="#historia">Historia</a>
+      <a href="#atractivos">Atractivos</a>
+      <a href="#playas">Playas</a>
+      <a href="#cabanas">Cabañas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2 style="font-size:36px; margin-bottom:20px;">Bienvenido a Puchuncaví</h2>
+      <p>Un rincón único de la Región de Valparaíso con playas, historia y naturaleza.</p>
+    </div>
+  </section>
+
+  <section id="historia">
+    <h3>Historia y Tradición</h3>
+    <p>Puchuncaví es una comuna costera de la Región de Valparaíso con un rico patrimonio cultural. Su nombre proviene del mapudungún y hace referencia a un lugar de descanso. Durante siglos, ha sido hogar de pescadores y agricultores, conservando hasta hoy sus tradiciones y fiestas populares.</p>
+  </section>
+
+  <section id="atractivos" style="background:#f3f4f6;">
+    <h3>Atractivos Turísticos</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Playa_Horc%C3%B3n.jpg" alt="Playa Horcón">
+        <h4>Caleta Horcón</h4>
+        <p>Un pintoresco pueblo de pescadores, conocido por su bohemia, artesanía y su hermosa playa.</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Caj%C3%B3n_de_Petorca_001.JPG" alt="Naturaleza Puchuncaví">
+        <h4>Parque Natural</h4>
+        <p>Senderos, miradores y áreas protegidas para quienes buscan conexión con la naturaleza.</p>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Casas_en_Ventanas.jpg" alt="Ventanas">
+        <h4>Ventanas</h4>
+        <p>Zona con playas extensas y tradiciones marineras, ideal para el turismo familiar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="playas">
+    <h3>Playas de Puchuncaví</h3>
+    <ul>
+      <li>Playa Horcón</li>
+      <li>Playa Cau Cau</li>
+      <li>Playa Ventanas</li>
+      <li>Playa Quirilluca</li>
+      <li>Playa La Luna</li>
+    </ul>
+  </section>
+
+  <section id="cabanas" style="background:#f3f4f6;">
+    <h3>Alquiler de Cabañas en Maitencillo</h3>
+    <p>Si buscas alojamiento junto al mar, Maitencillo es uno de los destinos favoritos de la comuna de Puchuncaví. Encuentra cabañas con vista al océano, rodeadas de naturaleza y con todas las comodidades para tu descanso.</p>
+    <p>Puedes reservar fácilmente en <a href="https://www.maitencillo.net" target="_blank" style="color:#1e3a8a; font-weight:bold;">Maitencillo.net</a></p>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h3>Planifica tu visita</h3>
+    <p>Ven a conocer Puchuncaví y vive una experiencia inolvidable entre playas, cultura y naturaleza.</p>
+    <a href="mailto:info@puchuncavi.cl">Contáctanos</a>
+  </section>
+
+  <footer>
+    <p>© <script>document.write(new Date().getFullYear())</script> Puchuncaví Turismo. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
